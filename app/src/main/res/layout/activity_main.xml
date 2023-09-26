@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color2"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        >
+       <LinearLayout
+           android:id="@+id/ll1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="@+id/cl1"
+           android:orientation="vertical"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="300dp"
+               app:layout_constraintStart_toStartOf="@id/ll1"
+               app:layout_constraintEnd_toEndOf="@id/ll1"
+               app:layout_constraintTop_toTopOf="@+id/ll1"
+               android:gravity="center"
+               >
+
+               <pl.droidsonroids.gif.GifImageView
+                   android:id="@+id/gifImageView"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:scaleType="fitXY"
+
+                   />
+
+           </LinearLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/audio_Layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textColorHint="@color/black"
+               app:boxStrokeColor="@color/black"
+               app:boxStrokeWidth="0.8dp"
+               app:hintTextColor="@color/black"
+               android:layout_margin="16dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               >
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/etAudio"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:drawableStart="@drawable/music"
+                   android:drawablePadding="20dp"
+                   android:hint="Audio"
+                   android:clickable="false"
+                   android:focusable="false"
+                   android:focusableInTouchMode="false"
+
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <Button
+               android:id="@+id/btnupload"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="UPLOAD"
+               android:textStyle="bold"
+               android:textColor="#FFFFFF"
+               android:background="#0CA6BA"
+               android:layout_gravity="center"
+               android:elevation="4dp"
+               android:stateListAnimator="@null"
+               android:layout_marginTop="4dp"
+               android:layout_marginEnd="16dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginBottom="16dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:foreground="?android:attr/selectableItemBackground"
+               style="@style/Widget.AppCompat.Button" />
+
+           <ProgressBar
+               android:id="@+id/progressBar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="8dp"
+               android:layout_gravity="center"
+               android:visibility="invisible" />
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/desc_Layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textColorHint="@color/black"
+               app:boxStrokeColor="@color/black"
+               app:boxStrokeWidth="0.8dp"
+               app:hintTextColor="@color/black"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               >
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/etDesc"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:drawableStart="@drawable/descriptionfinal"
+                   android:drawablePadding="27dp"
+                   android:hint="Description"
+                   android:inputType="textMultiLine"
+                   android:minLines="3"
+                   android:maxLines="4"
+                   android:paddingStart="8dp"
+                   android:paddingEnd="8dp"
+                   android:required="true"
+                   android:clickable="false"
+                   android:focusable="false"
+                   android:focusableInTouchMode="false"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+       </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
